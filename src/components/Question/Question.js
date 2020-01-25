@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from '../assets/quiz-bandeiras.jpg'
+import Img from '../../assets/quiz-bandeiras.jpg'
 
 const Question = ({ question }) => {
     return (

@@ -1,6 +1,6 @@
 import React from 'react'
-import Question from './Question'
-import OptionsList from './OptionsList'
+import { Question } from '../Question'
+import { OptionsList } from '../OptionsList'
 
 const QuizCard = ({ quiz, index }) => {
   return (

@@ -1,7 +1,6 @@
 import React from 'react'
-import { useStateValue } from '../context/StateProvider'
-import Results from './Results'
-import QuizCard from './QuizCard'
+import { useStateValue } from '../../context/StateProvider'
+import { QuizCard } from '../QuizCard'
 
 const Quiz = () => {
   const [{ quiz }, _] = useStateValue()

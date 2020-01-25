@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Quiz from './components/Quiz';
+import { Quiz } from './components/Quiz';
 import { Header } from './components/Header'
 import { StateProvider } from './context/StateProvider'
 import { reducer as QuizReducer } from './context/QuizReducer'
