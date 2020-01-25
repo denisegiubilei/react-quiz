@@ -1,7 +1,6 @@
 const quizData = [
   {
     "question": "Qual a capital da Argentina?",
-    "answered": false,
     "options" : [
       {
         "option": "Mendonza",
@@ -27,7 +26,6 @@ const quizData = [
   },
   {
     "question": "Qual a capital da Bolívia?",
-    "answered": false,
     "options" : [
       {
         "option": "Santa Cruz",
@@ -53,7 +51,6 @@ const quizData = [
   },
   {
     "question": "Qual a capital do Uruguai?",
-    "answered": false,
     "options" : [
       {
         "option": "Punta del Este",

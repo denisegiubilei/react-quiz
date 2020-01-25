@@ -1,11 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Option extends Component {
+const Option = ( props ) => {
 
-   render() {
-
-    const { answered, index, handleClick } = this.props
-    const { option, correct, clicked } = this.props.option
+    const { answered, index, handleClick } = props
+    const { option, correct, clicked } = props.option
 
     const buttonClass = answered 
       ? correct ? 'list-group-item-success hoverNone' : 'list-group-item-danger hoverNone'
@@ -20,7 +18,6 @@ class Option extends Component {
         onClick={() => handleClick(index)}   
       > { option } </button>      
     )
-  }
 }
 
 export default Option
