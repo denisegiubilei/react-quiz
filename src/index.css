@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   color: #495057;
@@ -75,16 +79,24 @@ img {
   font-size: 30px;
 }
 
-.hits {
-  padding-top: 15px;
+.results {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .callout {
-  max-width: 490px;
-  padding: 5px 20px;
+  max-width: 575px;
+  margin: 10px;
   border: 1px solid #eee;
   border-left-width: 5px;
   border-radius: 3px;
   border-left-color: #428bca;
   background-color: #428bca1c;
+  padding: 10px;
+}
+
+.retry {
+  width: 30%;
+  text-align: center;
 }

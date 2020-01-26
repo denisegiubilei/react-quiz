@@ -1,20 +1,36 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useStateValue } from '../../context/StateProvider'
 import { ACTIONS } from '../../context/QuizReducer'
 
-const Results = () => {
-  const [{ points, quiz }, dispatch] = useStateValue()
+const Results = ({ total }) => {
+  const resultsRef = useRef(null)
+  const [{ points }, dispatch] = useStateValue()
 
-  const refresh = () => dispatch({
-    type: ACTIONS.REFRESH
-  })
+  useEffect(() => {
+    scrollToReference(resultsRef)
+  });
+  
+  const refresh = () => {
+    scrollToTop()
+    dispatch({
+      type: ACTIONS.REFRESH
+    })
+  }
+
+  const scrollToTop = () => (
+    window.scrollTo({ top:0, left:0, behavior: 'smooth' })
+  )
+
+  const scrollToReference = ref => (
+    window.scrollTo({ top: ref.current.offsetTop, behavior: 'smooth' })
+  ) 
 
   return (
-    <div className="callout callout-primary" >
-      <div className="row">
-        <p className="align-middle col-sm-8 hits">Você acertou {points} de {quiz.length} perguntas!</p>
-        <button className="btn btn-light col-sm-4" onClick={refresh}>
-          <i className="fas fa-redo"></i> Refazer Quiz
+    <div className="callout" ref={resultsRef}>
+      <div className="results">
+        <p>Você acertou {points} de {total} perguntas!</p>
+        <button className="btn retry" onClick={refresh}>
+          Refazer Quiz
         </button>
       </div>
     </div>

@@ -1,9 +1,10 @@
 import React from 'react'
 import { useStateValue } from '../../context/StateProvider'
 import { QuizCard } from '../QuizCard'
+import { Results } from '../Results'
 
 const Quiz = () => {
-  const [{ quiz }, _] = useStateValue()
+  const [{ quiz, answered }, _] = useStateValue()
 
   return (
     <div>
@@ -15,6 +16,7 @@ const Quiz = () => {
           />
         )
       )}
+      { answered === quiz.length ? <Results total={quiz.length} /> : '' }
     </div>
   )
 }

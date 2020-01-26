@@ -30,7 +30,7 @@ export const reducer = (state, action) => {
       return {
         ...state,
         quiz: JSON.parse(JSON.stringify(originalQuiz)),
-        finished: 0,
+        answered: 0,
         points: 0
       }
     default:
