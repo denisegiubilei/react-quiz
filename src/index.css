@@ -53,6 +53,10 @@ img {
   cursor: pointer;
 }
 
+.btn:disabled {
+  pointer-events: none;
+}
+
 .success {
   color: #155724;
   background-color: #c3e6cb;
@@ -62,7 +66,6 @@ img {
 .error {
   color: #721c24;
   background-color: #f5c6cb;
-  pointer-events: none;
 }
 
 .header {
