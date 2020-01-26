@@ -4,7 +4,7 @@ import { QuizCard } from '../QuizCard'
 import { Results } from '../Results'
 
 const Quiz = () => {
-  const [{ quiz, answered }, _] = useStateValue()
+  const [{ quiz, answered }] = useStateValue()
 
   return (
     <div>

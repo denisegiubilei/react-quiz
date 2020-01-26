@@ -1,5 +1,5 @@
 const quizData = {
-  title: "Você conhece a América do Sul?",
+  title: "Você consegue descobrir todas as capitais?",
   questions: [
     {
       "title": "Qual a capital da Argentina?",
@@ -61,6 +61,48 @@ const quizData = {
         {
           "title": "Montevideu",
           "correct": true
+        }
+      ]
+    },
+    {
+      "title": "Qual a capital do Chile?",
+      "options": [
+        {
+          "title": "San Pedro de Atacama",
+          "correct": false
+        },
+        {
+          "title": "Pucón",
+          "correct": false
+        },
+        {
+          "title": "Valparaíso",
+          "correct": false
+        },
+        {
+          "title": "Santiago",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "title": "Qual a capital da Colômbia?",
+      "options": [
+        {
+          "title": "Quito",
+          "correct": false
+        },
+        {
+          "title": "Bogotá",
+          "correct": true
+        },
+        {
+          "title": "Medelín",
+          "correct": false
+        },
+        {
+          "title": "Barranquilla",
+          "correct": false
         }
       ]
     }
