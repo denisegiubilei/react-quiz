@@ -2,11 +2,12 @@ import React from 'react'
 import { Question } from '../Question'
 import { OptionsList } from '../OptionsList'
 
-const QuizCard = ({ quiz, index }) => {
+const QuizCard = ({ question, questionIdx }) => {
+  console.log(question.title)
   return (
     <div className="card">
-      <Question question={ quiz.question } />
-      <OptionsList options={ quiz.options } answered={ quiz.answered } index={ index } />
+      <Question title={ question.title } />
+      <OptionsList options={ question.options } questionIdx={questionIdx}/>
     </div>
   )
 }

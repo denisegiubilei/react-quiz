@@ -5,46 +5,46 @@ import { ACTIONS } from '../../context/QuizReducer'
 
 import { Option } from '../Option'
 
-const OptionsList = (props) => {
+const OptionsList = ({ options, questionIdx }) => {
 
   const [{ quiz }, dispatch] = useStateValue()
 
-  const handleClick = index => {
-    if (!props.answered) {
-      let { options } = props
-     
-      options.forEach((el, idx) => {
-        if (index === idx) {
-          el.clicked = true
-          dispatch({
-            type: ACTIONS.ADD_POINT
-          })
-          quiz[props.index].resposta = el.correct ? 'correta' : 'errada'
-        }
-      })
-      quiz[props.index].options = [...options]
-      quiz[props.index].answered = true
-      dispatch({
-        type: ACTIONS.UPDATE,
-        quiz: [... quiz]
-      })}
-    }
+  const addPoints = () => {
+    console.log('addpoints')
+    return dispatch({ type: ACTIONS.ADD_POINT })
+  }
+  
+  const submitAnswer = () => {
+    dispatch({ type: ACTIONS.ANSWER })
+    dispatch({ type: ACTIONS.UPDATE, quiz })
+  }
 
-    return (
-      <div>
-        { 
-          props.options.map((el, index) =>
-            <Option 
-              key={index}
-              index={index}
-              option={el} 
-              answered={props.answered}
-              handleClick={handleClick}
-            />
-          )
-        }
-      </div>
-    )
+  const answerQuestion = chosenOptionIdx => {
+    options.forEach((option, idx) => {
+      option.answered = true
+      if (chosenOptionIdx === idx) {
+        option.clicked = true
+        option.correct && addPoints()
+      }
+    })
+    quiz[questionIdx].options = [...options]
+    submitAnswer()
+  }
+
+  return (
+    <div>
+      { 
+        options.map((option, index) =>
+          <Option 
+            key={index}
+            option={option} 
+            optionIdx={index}
+            answerQuestion={answerQuestion}
+          />
+        )
+      }
+    </div>
+  )
 }
 
 export default OptionsList

@@ -1,11 +1,11 @@
 import React from 'react'
 import Img from '../../assets/quiz-bandeiras.jpg'
 
-const Question = ({ question }) => {
+const Question = ({ title }) => {
     return (
       <>
-        <img src={ Img } />
-        <p className="question">{ question }</p>
+        <img alt="question background" src={ Img } />
+        <p className="question">{ title }</p>
       </>
     )
 }

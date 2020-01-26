@@ -6,12 +6,16 @@ const Quiz = () => {
   const [{ quiz }, _] = useStateValue()
 
   return (
-    <>
-      { quiz.map((el, index) =>
-        <QuizCard quiz={ el } key={ index } index={index} />
+    <div>
+      { quiz.map((question, index) => (
+          <QuizCard 
+            question={ question } 
+            questionIdx={ index }
+            key={ index } 
+          />
+        )
       )}
-      {/* { finished === quiz.length ? <Results /> : '' } */}
-    </>
+    </div>
   )
 }
 

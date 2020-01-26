@@ -1,12 +1,12 @@
 import quizData from '../data/quiz'
 
-const originalQuiz = JSON.parse(JSON.stringify(quizData))
+const originalQuiz = JSON.parse(JSON.stringify(quizData.questions))
 
 export const ACTIONS = {
   UPDATE : 'update',
+  ANSWER: 'answer',
   ADD_POINT: 'addPoint',
-  FINISHED: 'finished',
-  REFRESH: 'refresh'
+  REFRESH: 'refresh',
 }
 
 export const reducer = (state, action) => {
@@ -21,10 +21,10 @@ export const reducer = (state, action) => {
         ...state,
         points: state.points + 1
       }
-    case ACTIONS.FINISHED:
+    case ACTIONS.ANSWER:
       return {
         ...state,
-        points: state.finished + 1
+        answered: state.answered + 1
       }
     case ACTIONS.REFRESH:
       return {

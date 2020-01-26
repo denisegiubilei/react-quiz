@@ -1,21 +1,27 @@
 import React from 'react'
 
-const Option = ( props ) => {
+const Option = ( { option, optionIdx, answerQuestion } ) => {
 
-    const { answered, index, handleClick } = props
-    const { option, correct, clicked } = props.option
+  const { title, correct, clicked, answered } = option
 
-    const buttonClass = answered ? ( correct ? 'success' : 'error' ) : ''
+  const buttonClass = answered && correct ? 'success' : ( clicked ? 'error' : '' )
 
-    const disabled = !clicked && !correct && answered
-  
-    return (
-      <button
-        disabled={ disabled }
-        className={'btn ' + buttonClass} 
-        onClick={() => handleClick(index)}   
-      > { option } </button>      
-    )
+  const disabled = answered && !correct
+
+  const _handleClick = (e) => {
+    e.preventDefault()
+    answerQuestion(optionIdx)
+  }
+
+  return (
+    <button
+      disabled={disabled}
+      className={'btn ' + buttonClass} 
+      onClick={_handleClick}   
+    > 
+      {title}
+    </button>   
+  )
 }
 
 export default Option

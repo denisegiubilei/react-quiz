@@ -1,79 +1,70 @@
-const quizData = [
-  {
-    "question": "Qual a capital da Argentina?",
-    "options" : [
-      {
-        "option": "Mendonza",
-        "correct": false,
-        "clicked": false
-      },
-      {
-        "option": "Buenos Aires",
-        "correct": true,
-        "clicked": false
-      },
-      {
-        "option": "Bariloche",
-        "correct": false,
-        "clicked": false
-      },
-      {
-        "option": "Ushiaia",
-        "correct": false,
-        "clicked": false
-      }
-    ]
-  },
-  {
-    "question": "Qual a capital da Bolívia?",
-    "options" : [
-      {
-        "option": "Santa Cruz",
-        "correct": false,
-        "clicked": false
-      },
-      {
-        "option": "Sucre",
-        "correct": true,
-        "clicked": false
-      },
-      {
-        "option": "La Paz",
-        "correct": false,
-        "clicked": false
-      },
-      {
-        "option": "Cochabamba",
-        "correct": false,
-        "clicked": false
-      }
-    ]
-  },
-  {
-    "question": "Qual a capital do Uruguai?",
-    "options" : [
-      {
-        "option": "Punta del Este",
-        "correct": false,
-        "clicked": false
-      },
-      {
-        "option": "Salto",
-        "correct": false,
-        "clicked": false
-      },
-      {
-        "option": "Bariloche",
-        "correct": false,
-        "clicked": false
-      },
-      {
-        "option": "Montevideu",
-        "correct": true,
-        "clicked": false
-      }
-    ]
-  }
-]
+const quizData = {
+  title: "Você conhece a América do Sul?",
+  questions: [
+    {
+      "title": "Qual a capital da Argentina?",
+      "options": [
+        {
+          "title": "Mendonza",
+          "correct": false
+        },
+        {
+          "title": "Buenos Aires",
+          "correct": true
+        },
+        {
+          "title": "Bariloche",
+          "correct": false
+        },
+        {
+          "title": "Ushiaia",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "title": "Qual a capital da Bolívia?",
+      "options": [
+        {
+          "title": "Santa Cruz",
+          "correct": false
+        },
+        {
+          "title": "Sucre",
+          "correct": true
+        },
+        {
+          "title": "La Paz",
+          "correct": false
+        },
+        {
+          "title": "Cochabamba",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "title": "Qual a capital do Uruguai?",
+      "options": [
+        {
+          "title": "Punta del Este",
+          "correct": false
+        },
+        {
+          "title": "Salto",
+          "correct": false
+        },
+        {
+          "title": "Bariloche",
+          "correct": false
+        },
+        {
+          "title": "Montevideu",
+          "correct": true
+        }
+      ]
+    }
+  ]
+}
 
 export default quizData

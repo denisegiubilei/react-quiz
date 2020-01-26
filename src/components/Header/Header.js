@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Header = ({title = 'Quiz'}) => (
-  <div className="header">
-    <p className="title">{title}</p>
-  </div>
+  <header className="header">
+    <p>{title}</p>
+  </header>
 )
 
 export default Header
