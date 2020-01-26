@@ -4,11 +4,9 @@ import { OptionsList } from '../OptionsList'
 
 const QuizCard = ({ quiz, index }) => {
   return (
-    <div className="card" style={{ maxWidth: "500px"}}>
+    <div className="card">
       <Question question={ quiz.question } />
-      <div className="list-group">
-        <OptionsList options={ quiz.options } answered={ quiz.answered } index={ index } />
-      </div>
+      <OptionsList options={ quiz.options } answered={ quiz.answered } index={ index } />
     </div>
   )
 }

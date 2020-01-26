@@ -31,7 +31,7 @@ const OptionsList = (props) => {
     }
 
     return (
-      <>
+      <div>
         { 
           props.options.map((el, index) =>
             <Option 
@@ -43,7 +43,7 @@ const OptionsList = (props) => {
             />
           )
         }
-      </>
+      </div>
     )
 }
 
