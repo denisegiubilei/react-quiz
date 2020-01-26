@@ -20,7 +20,7 @@ const Option = ( { option, optionIdx, answerQuestion } ) => {
       onClick={_handleClick}   
     > 
       {title}
-    </button>   
+    </button>     
   )
 }
 

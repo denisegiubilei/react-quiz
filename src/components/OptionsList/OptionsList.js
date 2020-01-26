@@ -9,10 +9,9 @@ const OptionsList = ({ options, questionIdx }) => {
 
   const [{ quiz }, dispatch] = useStateValue()
 
-  const addPoints = () => {
-    console.log('addpoints')
-    return dispatch({ type: ACTIONS.ADD_POINT })
-  }
+  const addPoints = () => (
+    dispatch({ type: ACTIONS.ADD_POINT })
+  )
   
   const submitAnswer = () => {
     dispatch({ type: ACTIONS.ANSWER })
@@ -34,11 +33,11 @@ const OptionsList = ({ options, questionIdx }) => {
   return (
     <div>
       { 
-        options.map((option, index) =>
+        options.map((option, idx) =>
           <Option 
-            key={index}
+            key={idx}
             option={option} 
-            optionIdx={index}
+            optionIdx={idx}
             answerQuestion={answerQuestion}
           />
         )
