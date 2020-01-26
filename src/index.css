@@ -27,7 +27,7 @@ img {
 
 .question {
   position: absolute;
-  top: 28%;
+  top: 26%;
   left: 50%;
   width: 60%;
   transform: translate(-50%, -50%);
@@ -104,4 +104,10 @@ img {
 .retry {
   width: 30%;
   text-align: center;
+}
+
+@media only screen and (max-width: 580px) {
+  .question {
+    top: 20%;
+  }
 }
