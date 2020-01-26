@@ -107,7 +107,16 @@ img {
 }
 
 @media only screen and (max-width: 580px) {
+  .header {
+    text-align: center;
+  }
   .question {
-    top: 20%;
+    top: 17%;
+  }
+  .img-container {
+    height: 190px;
+  }
+  img {
+    max-height: none;
   }
 }
