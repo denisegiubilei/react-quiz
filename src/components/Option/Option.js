@@ -5,16 +5,14 @@ const Option = ( props ) => {
     const { answered, index, handleClick } = props
     const { option, correct, clicked } = props.option
 
-    const buttonClass = answered 
-      ? correct ? 'list-group-item-success hoverNone' : 'list-group-item-danger hoverNone'
-      : ''
+    const buttonClass = answered ? ( correct ? 'success' : 'error' ) : ''
 
     const disabled = !clicked && !correct && answered
   
     return (
       <button
         disabled={ disabled }
-        className={'list-group-item list-group-item-action ' + buttonClass} 
+        className={'btn ' + buttonClass} 
         onClick={() => handleClick(index)}   
       > { option } </button>      
     )
