@@ -4,11 +4,14 @@ import { Quiz } from './components/Quiz';
 import { Header } from './components/Header'
 import { StateProvider } from './context/StateProvider'
 import { reducer as QuizReducer } from './context/QuizReducer'
-import quizData from './data/quiz'
+import quizData from './static/data/quiz'
 
 const App = () => {
 
+  const originalQuiz = JSON.parse(JSON.stringify(quizData.questions))
+  
   const initialState = {
+    originalQuiz: originalQuiz,
     quiz: [...quizData.questions],
     answered: 0,
     points: 0

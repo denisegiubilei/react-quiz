@@ -1,7 +1,3 @@
-import quizData from '../data/quiz'
-
-const originalQuiz = JSON.parse(JSON.stringify(quizData.questions))
-
 export const ACTIONS = {
   UPDATE : 'update',
   ANSWER: 'answer',
@@ -29,7 +25,7 @@ export const reducer = (state, action) => {
     case ACTIONS.REFRESH:
       return {
         ...state,
-        quiz: JSON.parse(JSON.stringify(originalQuiz)),
+        quiz: JSON.parse(JSON.stringify(state.originalQuiz)),
         answered: 0,
         points: 0
       }

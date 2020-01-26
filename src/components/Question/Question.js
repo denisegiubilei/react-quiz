@@ -1,5 +1,5 @@
 import React from 'react'
-import fallbackImg from '../../assets/fallback.jpg'
+import fallbackImg from '../../static/assets/fallback.jpg'
 
 const Question = ({ title, img }) => (
   <div className="img-container">
