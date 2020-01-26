@@ -79,6 +79,11 @@ img {
   font-size: 30px;
 }
 
+.img-container {
+  max-height: 350px;
+  overflow: hidden;
+}
+
 .results {
   display: flex;
   justify-content: space-around;
