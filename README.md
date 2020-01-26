@@ -1,5 +1,5 @@
 # Quiz
-Simple quiz with React.
+Simple quiz with React.<br />
 Have fun here: http://react-quiz-dg.herokuapp.com/
 
 ## Available Scripts
