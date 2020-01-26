@@ -3,7 +3,7 @@ const quizData = {
   questions: [
     {
       "title": "Qual a capital da Argentina?",
-      "img": "https://media.seudinheiro.com/uploads/2019/12/shutterstock_1494798887-628x353.jpg",
+      "img": "https://images.freeimages.com/images/large-previews/d79/argentinian-flags-1445146.jpg",
       "options": [
         {
           "title": "Mendonza",
@@ -25,7 +25,7 @@ const quizData = {
     },
     {
       "title": "Qual a capital da Bolívia?",
-      "img": "https://positivoturismo.com.br/wp-content/uploads/2019/12/dicas-atra%C3%A7%C3%B5es-bolivia-1-1-1024x682-731x487.jpg",
+      "img": "https://images.freeimages.com/images/large-previews/a83/vulcano-1515736.jpg",
       "options": [
         {
           "title": "Santa Cruz",
@@ -47,7 +47,7 @@ const quizData = {
     },
     {
       "title": "Qual a capital do Uruguai?",
-      "img": "https://i.pinimg.com/originals/4c/6f/b1/4c6fb100746907d19e589b360a87dd3e.jpg",
+      "img": "https://images.freeimages.com/images/large-previews/08f/casapueblo-uruguay-4-1523919.jpg",
       "options": [
         {
           "title": "Punta del Este",
@@ -91,7 +91,7 @@ const quizData = {
     },
     {
       "title": "Qual a capital da Colômbia?",
-      "img": "https://www.meioemensagem.com.br/wp-content/uploads/2019/03/Colombia.jpg",
+      "img": "https://images.freeimages.com/images/large-previews/8c5/cali-bus-1252557.jpg",
       "options": [
         {
           "title": "Quito",
