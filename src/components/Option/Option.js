@@ -14,7 +14,7 @@ const Option = ( props ) => {
     return (
       <button
         disabled={ disabled }
-        className={'list-group-item list-group-item-action ' + buttonClass} 
+        className={'btn ' + buttonClass} 
         onClick={() => handleClick(index)}   
       > { option } </button>      
     )
