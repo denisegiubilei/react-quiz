@@ -69,7 +69,7 @@ const quizData = {
     },
     {
       "title": "Qual a capital do Chile?",
-      "img": "https://www.melhoresdestinos.com.br/wp-content/uploads/2019/02/passagens-aereas-santiago-capa2019-03.jpg",
+      "img": "https://images.pexels.com/photos/1684166/pexels-photo-1684166.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       "options": [
         {
           "title": "San Pedro de Atacama",
