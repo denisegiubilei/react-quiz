@@ -1,8 +1,6 @@
 import React from 'react'
-
 import { useStateValue } from '../../context/StateProvider'
 import { ACTIONS } from '../../context/QuizReducer'
-
 import { Option } from '../Option'
 
 const OptionsList = ({ options, questionIdx }) => {
