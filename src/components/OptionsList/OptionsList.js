@@ -3,7 +3,7 @@ import { useStateValue } from '../../context/StateProvider'
 import { ACTIONS } from '../../context/QuizReducer'
 import { Option } from '../Option'
 
-const OptionsList = ({ options, questionIdx }) => {
+const OptionsList = ({ options, questionIdx, autoscroll }) => {
 
   const [{ quiz }, dispatch] = useStateValue()
 
@@ -26,6 +26,7 @@ const OptionsList = ({ options, questionIdx }) => {
     })
     quiz[questionIdx].options = [...options]
     submitAnswer()
+    autoscroll()
   }
 
   return (

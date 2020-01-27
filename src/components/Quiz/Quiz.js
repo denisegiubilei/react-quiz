@@ -23,10 +23,10 @@ const Quiz = () => {
       { quiz.map((question, index) => (
           <QuizCard 
             key={ index } 
-            ref={instance => cardsRef.current[index] = instance} 
+            ref={ instance => cardsRef.current[index] = instance } 
             question={ question } 
             questionIdx={ index }
-            handleClick={ scrollToNextCard }
+            autoscroll={ scrollToNextCard }
           />
         )
       )}
