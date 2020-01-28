@@ -5,7 +5,7 @@ import { Option } from '../Option'
 
 const OptionsList = ({ options, questionIdx, autoscroll }) => {
 
-  const [{ quiz }, dispatch] = useStateValue()
+  const [{ questions }, dispatch] = useStateValue()
 
   const addPoints = () => (
     dispatch({ type: ACTIONS.ADD_POINT })
@@ -13,7 +13,7 @@ const OptionsList = ({ options, questionIdx, autoscroll }) => {
   
   const submitAnswer = () => {
     dispatch({ type: ACTIONS.ANSWER })
-    dispatch({ type: ACTIONS.UPDATE, quiz })
+    dispatch({ type: ACTIONS.UPDATE, questions })
   }
 
   const answerQuestion = chosenOptionIdx => {
@@ -24,7 +24,7 @@ const OptionsList = ({ options, questionIdx, autoscroll }) => {
         option.correct && addPoints()
       }
     })
-    quiz[questionIdx].options = [...options]
+    questions[questionIdx].options = [...options]
     submitAnswer()
     autoscroll()
   }

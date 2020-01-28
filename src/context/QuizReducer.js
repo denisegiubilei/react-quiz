@@ -1,3 +1,13 @@
+
+import quizData from '../static/data/quiz'
+
+export const initialState = {
+  originalQuiz: JSON.parse(JSON.stringify(quizData)),
+  questions: [...quizData.questions],
+  answered: 0,
+  points: 0
+}
+
 export const ACTIONS = {
   UPDATE : 'update',
   ANSWER: 'answer',
@@ -10,7 +20,7 @@ export const reducer = (state, action) => {
     case ACTIONS.UPDATE:
       return {
         ...state,
-        quiz: [...action.quiz]
+        questions: [...action.questions]
       }
     case ACTIONS.ADD_POINT:
       return {
@@ -24,10 +34,8 @@ export const reducer = (state, action) => {
       }
     case ACTIONS.REFRESH:
       return {
-        ...state,
-        quiz: JSON.parse(JSON.stringify(state.originalQuiz)),
-        answered: 0,
-        points: 0
+        ...initialState,
+        questions: JSON.parse(JSON.stringify(state.originalQuiz.questions)),
       }
     default:
       return state

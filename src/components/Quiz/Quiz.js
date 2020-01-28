@@ -4,12 +4,12 @@ import { QuizCard } from '../QuizCard'
 import { Results } from '../Results'
 
 const Quiz = () => {
-  const [{ quiz, answered }] = useStateValue()
+  const [{ questions, answered }] = useStateValue()
   const cardsRef = useRef([]);
   
   useEffect(() => {
-    cardsRef.current = cardsRef.current.slice(0, quiz.length);
-  }, [quiz]);
+    cardsRef.current = cardsRef.current.slice(0, questions.length);
+  }, [questions]);
 
   const scrollToNextCard = (clickedCardIdx) => {
     setTimeout(() => {
@@ -20,7 +20,7 @@ const Quiz = () => {
 
   return (
     <div>
-      { quiz.map((question, index) => (
+      { questions.map((question, index) => (
           <QuizCard 
             key={ index } 
             ref={ instance => cardsRef.current[index] = instance } 
@@ -30,7 +30,7 @@ const Quiz = () => {
           />
         )
       )}
-      { answered === quiz.length ? <Results total={quiz.length} /> : '' }
+      { answered === questions.length ? <Results total={questions.length} /> : '' }
     </div>
   )
 }

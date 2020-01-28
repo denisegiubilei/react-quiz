@@ -3,23 +3,13 @@ import React from 'react';
 import { Quiz } from './components/Quiz';
 import { Header } from './components/Header'
 import { StateProvider } from './context/StateProvider'
-import { reducer as QuizReducer } from './context/QuizReducer'
-import quizData from './static/data/quiz'
+import { reducer as QuizReducer, initialState as QuizInitialState } from './context/QuizReducer'
 
 const App = () => {
 
-  const originalQuiz = JSON.parse(JSON.stringify(quizData.questions))
-  
-  const initialState = {
-    originalQuiz: originalQuiz,
-    quiz: [...quizData.questions],
-    answered: 0,
-    points: 0
-  }
-  
   return (
-    <StateProvider initialState={initialState} reducer={QuizReducer}>
-      <Header title={quizData.title}/>
+    <StateProvider initialState={QuizInitialState} reducer={QuizReducer}>
+      <Header />
       <Quiz />
     </StateProvider>
   )
